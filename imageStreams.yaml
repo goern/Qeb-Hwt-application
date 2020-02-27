@@ -1,0 +1,28 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    thoth-station.ninja/template-version: 0.2.0-dev
+  creationTimestamp: null
+  labels:
+    app: qeb-hwt
+    component: ultrahook
+  name: ultrahook
+spec:
+  lookupPolicy:
+    local: true
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    thoth-station.ninja/template-version: 0.2.0-dev
+  creationTimestamp: null
+  labels:
+    app: qeb-hwt
+    component: webhook-recevier
+  name: qeb-hwt-webhook-recevier
+spec:
+  lookupPolicy:
+    local: true

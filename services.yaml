@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    thoth-station.ninja/template-version: 0.2.0-dev
+  labels:
+    app: qeb-hwt
+    component: webhook-recevier
+  name: webhook-recevier
+spec:
+  ports:
+    - name: webhook-recevier
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: qeb-hwt
+    component: webhook-recevier

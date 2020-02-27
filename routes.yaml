@@ -1,0 +1,17 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    thoth-station.ninja/template-version: 0.2.0-dev
+  creationTimestamp: null
+  labels:
+    app: qeb-hwt
+    component: webhook-recevier
+  name: qeb-hwt
+spec:
+  to:
+    kind: Service
+    name: webhook-recevier
+    weight: 100
+  wildcardPolicy: None
